@@ -1,0 +1,645 @@
+====================================================================================================================
+PHP Manual Learning
+Author : masdevan
+Instagram : @devan.ys
+====================================================================================================================
+PHP BASIC
+====================================================================================================================
+// You_Text				(Single Line Comment)
+# You_text				(Single Line Comment)
+/* You Text */				(Single Line Comment)
+$Variable = isi_Variable;		(Variable dibuat dengan "$")
+
+global $variable = isi_variable;	(Membuat global variable)
+$GLOBALS['$variable']; 			(Membuat global variable dengan cara lain)
+
+echo					(berfungsi untuk menampilkan elemen ! "Tanpa return")
+echo $variable;				(untuk menampilkan variable langsung)
+echo "<html>";				(Untuk menampilkan php berformat html)
+echo "hello" . "world";			(Untuk menggabungkan variable dengan metode "." (titik))
+
+print					(berfungsi untuk menampilkan element ! "memiliki return 1")
+print();				(berfungsi untuk menampilkan element dalam metode sangkar)
+print($variable);			(Untuk menampilkan variable secara langsung dengan metode sangkar)
+print("Hello" . "World!");		(Untuk menggabungkan string menggunakan print dengan metode sangkar serta "." (titik))
+print "Strings";			(Untuk menampilkan element dengan metode langsung seperti echo)
+
+"String anda"				(Tipe data string menggunakan tanda kutip (" "))
+82782					(Tipe data integer / angka langsung tanpa titik dll)
+22.88					(Tipe data float dengan menggunakan titik ".")
+true & false 				(Tipe data boolean dengan true (benar) & false (salah));
+
+echo strlen("Hello World!");		(Menghitung Jumlah huruf)
+echo str_word_count("Hello World!); 	(Menghitung jumlah kata)
+echo strrev("Hello World!);		(Memutar balikkan sebuah huruf atau mereversenya)
+echo strpos("Hello World", "World");	(Untuk mencari sebuah kata / Ketersediaan kata)
+echo str_replace("Hello", "Dolly", "Hello World!");	(Mengganti kata / mereplacenya output disamping adalah Hello Dolly)
+
+var_dump($variable)			(Untuk memeriksa model atau tipe data)
+
+echo abs(-25);				(Untuk mengembalikan nilai bilangan negatif ke positif)
+echo acos(0.65);			(Mengembalikan nilai arc cosinus suatu bilangan)
+echo acosh(7);				(mengembalikan kosinus hiperbolik terbalik suatu bilangan)
+echo asin(0.65);			(mengembalikan sinus busur suatu bilangan)
+echo asinh(7);				(mengembalikan invers sinus hiperbolik suatu bilangan)
+echo atan(0.50);			(mengembalikan tangen busur dari arg sebagai nilai numerik antara -Pi/2 dan Pi/2 radian)
+echo atan2(-0.50, -0.50);		(mengembalikan garis singgung busur y/x, dalam radian. Dimana x dan y adalah koordinat suatu titik (x,y))
+echo atanh(1)				(mengembalikan tangen hiperbolik terbalik suatu bilangan)
+echo base_convert("E190",12,8);		(mengonversi bilangan dari satu basis bilangan ke basis bilangan lainnya)
+echo bindc("0011");			(mengubah bilangan biner menjadi bilangan desimal)
+echo ceil(0.60);			(membulatkan angka ke atas ke bilangan bulat terdekat, jika perlu)
+echo cos(3);				(mengembalikan kosinus suatu bilangan)
+echo cosh(3);				(mengembalikan kosinus hiperbolik suatu bilangan (setara dengan (exp(angka) + exp(-angka)) / 2))
+echo decbin("3");			(mengubah bilangan desimal menjadi bilangan biner)
+echo dechec("30");			(mengubah bilangan desimal menjadi bilangan heksadesimal)
+echo decoct("30");			(mengubah bilangan desimal menjadi bilangan oktal)
+echo deg2rad("45");			(mengubah nilai derajat menjadi nilai radian)
+echo exp(0);				(mengembalikan E pangkat x (E x ))
+echo expm1(1);				(mengembalikan exp(x) - 1)
+echo floor(0.60);			(membulatkan angka ke BAWAH ke bilangan bulat terdekat, jika perlu, dan mengembalikan hasilnya)
+echo fmod(15, 6);			(mengembalikan sisa (modulo) dari x/y)
+echo getrandmax();			(getrandmax() mengembalikan nilai terbesar yang dapat dikembalikan oleh rand())
+echo hexdec("1e");			(mengubah bilangan heksadesimal menjadi bilangan desimal)
+echo hypot(3,4);			(menghitung sisi miring segitiga siku-siku)
+echo intdiv(8, 4);			(digunakan untuk pembagian integer)
+echo is_infinite(2);			(memeriksa apakah suatu nilai terbatas atau tidak, Jika benar maka angka 1, jika salah akan kosong)
+echo lcg_value();			(mengembalikan angka acak semu dalam rentang antara 0 dan 1)
+echo log(2);				(mengembalikan logaritma natural suatu bilangan, atau logaritma bilangan ke basis)
+echo log10(2);				(mengembalikan logaritma basis 10 suatu angka)
+echo log1p(2);				(mengembalikan log(1+angka), dihitung dengan cara yang akurat bahkan ketika nilai angka mendekati nol)
+echo max(array(1,3,4,5,6));		(mengembalikan nilai tertinggi dalam array, atau nilai tertinggi dari beberapa nilai yang ditentukan)
+echo min(array(0,2,4,5));		(mengembalikan nilai terendah dalam array, atau nilai terendah dari beberapa nilai yang ditentukan)
+echo mt_getrandmax();			(mengembalikan nilai terbesar yang dapat dikembalikan oleh mt_rand())
+echo mt_rand(10,100);			(menghasilkan bilangan bulat acak menggunakan algoritma Mersenne Twister)
+echo octdec("106");			(mengubah bilangan oktal menjadi bilangan desimal)
+echo pi(4);				(mengembalikan nilai PI)
+echo pow(2,4);				(mengembalikan x pangkat y)
+echo rad2deg(pi(2));			(mengubah nilai radian menjadi nilai derajat)
+echo rand(10,100);			(menghasilkan bilangan bulat acak)
+echo round(0.60);			(membulatkan bilangan floating-point)
+echo sin(3);				(mengembalikan sinus suatu bilangan)
+echo sinh(3);				(mengembalikan sinus hiperbolik suatu bilangan, yang sama dengan (exp(angka) - exp(-angka))/2))
+echo sqrt(4);				(mengembalikan akar kuadrat suatu angka)
+echo tan(-10);				(mengembalikan tangen suatu bilangan)
+echo tanh(0.50);			(mengembalikan tangen hiperbolik suatu bilangan, yang sama dengan sinh(x)/cosh(x))
+
+define("mycar", "My car is BMW");	(Membuat Konstanta dengan metode definr)
+const mycar = "BMW";			(Membuat variable dengan tipe konstanta)
+echo mycar;				(Metode penampilan konstanta)
+
+__LINE__				(untuk memeriksa baris ke berapakah kode tersebut, misalkan kode di baris 90 maka akan menampilkan angka 90)
+__FILE__				(Menampilkan berada dimakanah file yang anda jalankan tersebut / Berisikan PATH)
+__DIR__					(Berisi jalur direktori dimana file anda berada / dibuka)
+__FUNCTION__				(Berisikan nama dari fungsi (Berfungsi di lingkungan Function))
+__CLASS__				(berisikan nama dari class (Berfungsi di lingkungan class))
+__TRAIT__				(Berisikan nama trait dan namespaces (Berfungsi di lingkungan namespaces dan trait))
+__METHOD__				(Berisikan nama method dan class (Berfungsi di lingkungan class yang terdapat method))
+__NAMESPACE__				(Berisikan nama namespaces (berfungsi di lingkungan yang terdapat namespaces))
+ClassName::class			(Berisikan nama class dan namespace (Berfungsi di lingkungan class dengan lingkup namespaces))	
+
++					(Digunakan untuk melakukan pertambahan)
+-					(Digunakan untuk melakukan Pengurangan)
+*					(Digunakan untuk melakukan Perkalian)
+/					(Digunakan untuk melakukan Pembagian)
+%					(Digunakan untuk melakukan Hasil Modulus atau sisa Bagi)
+**					((Digunakan untuk melakukan Perpangkatan)
+
+=					(Untuk melakukan sama dengan atau mengisi ruang kosong)
++=					(Untuk melakukan pengisian pada variable dan menyimpanya pada variable yang sama)
+-=					(Untuk melakukan pengurangan pada variable dan menyimpanya pada variable yang sama)
+*=					(Untuk melakukan perkalian pada variable dan menyimpanya pada variable yang sama)
+/=					(untuk melakukan pembagian pada variable dan menyimpanya pada variable yang sama)
+%=					(Untuk melakukan modulus atau sisa bagi pada variable dan menyimpanya pada variable yang sama)
+.=					(Untuk menggabungkan string yang berbeda dalam satu variable yang sama dan menyimpanya di satu variable yang sama)
+
+== 					(untuk memeriksa apakah dua nilai adalah sama, jika iya maka true jika tidak maka false)
+!=					(untuk memeriksa apakah kedua nilai tidak sama jika beda maka true jika iya maka false)
+===					(untuk memeriksa apakah kedua nilai sama dengan beserta tipe datanya, jika iya maka true jika tidak maka false)
+!==					(untuk memeriksa apakah kedua nilai berbeda dengan tipe datanya sekalian, jika beda maka true jika sama maka false)
+>					(untuk memeriksa apakah nilai di kanan lebih besar dari yang dikiri)	
+< 					(Untuk memeriksa apakah nilai di kiri lebih besar dari yang dikanan)
+>=					(untuk memeriksa apakah nilai di kanan lebih besar dari yang dikiri atau sama dengan, jika iya maka true)
+<=					(Untuk memeriksa apakah nilai di kiri lebih besar dari yang dikanan atau sama dengan, jika iya maka true)
+<>					(untuk memeriksa apakah kedua nilai berbeda, jika iya maka true jika tidak maka false)
+<=>					(Untuk memeriksa relasional apakah nilai di sebelah kiri lebih besar dari kanan, jika iya maka menghasilkan 1 jika tidak -1 jika sama 0)
+
+++$x 					(untuk menaikkan nilai atau mengincrement nilai sebanyak satu unit di kedua variable)
+$x++					(untuk menaikkan nilai atau mengincrement nilai sebanyak satu unit di salah satu variable)
+--$x 					(untuk menurunkan nilai atau mengdecrement nilai sebanyak satu unit di kedua variable)
+$x--					(untuk menurunkan nilai atau mengdecrement nilai sebanyak satu unit di salah satu variable)
+
+and / &&				(Digunakan untuk menggabungkan kedua nilai (Harus bersifat true di kedua nilai untuk menghasilkan true))
+or / ||					(Digunakan untuk membandingkan jika kedua nilai true atau setidaknya salah satu true)
+xor 					(Untuk membandingkan salah satu variable adalh true namun bukan keduanya, atau keduanya true atau false)
+!					(Untuk mengembalikan nilai jika true maka false)
+. 					(untuk menggabungkan sebuah string)
+
+$greeting = $nilai ? "Halo" : "Iya";	(Untuk perbandingan true, jika true maka menghasilkan halo, jika false maka iya)
+$user = $_GET['username'] ?? "Tamu";	(Jika username benar maka akan menghasilkan nilai inputan, jika salah maka akan ada tulisan tamu)
+
+
+if (condition) {					( Jika Mengunakan if biasa tanpa else atau else if		)
+  code to be executed if condition is true;		( maka akan menghasilkan nilai true saja dan false		)
+}							( akan bernilai null atau tidak ada				)
+
+
+if (condition) {					( Menggunakan Pernyataan if dan else tanpa else if 		)
+  code to be executed if condition is true;		( maka jika pernyataan benar akan mengeksekusi kode pada	)
+} else {						( pernyataan if dan jika salah maka akan mengeksekusi 		)
+  code to be executed if condition is false;		( kode yang tersedia pada statement else 			)
+}							(								)
+
+
+if (condition) {								( Menggunakan pernyataan if, else dam else if 	)
+  code to be executed if this condition is true;				( Jika kode pertama atau eksekusi pertama benar )
+} elseif (condition) {								( maka akan mengeksekusi kode pada statement if )
+  code to be executed if first condition is false and this condition is true;	( jika if salah maka akan mengeksekusi kode 	)
+} else {									( alternatif pada statement else if yang ada	)
+  code to be executed if all conditions are false;				( Jika dari statement awal dan alternatif tidak )
+}										( tersedia semuanya maka mengeksekusi else 	)
+
+
+switch ($variable) {					( Metode switch digunakan untuk mencari ketersediaan pernyataan 	)
+  case value:						( jika pernyataan pertama tersedia makan akan mengeksekusi case pertama )
+    kode yang akan ditampilkan;				( jika tidak tersedia maka akan mengeksekusi case kedua			)
+    break;						( fungsi dari case adalah untuk mencari nilai value yg akan ditentukan 	)
+  case value:						( jika case sudah tersedia maka akan menampilkan kode eksekusi di 	)
+    kode yang akan ditampilkan;				( kode yang akan ditampilkan, biasanya berisi echo dll			)
+    break;						( fungsi dari break adalah memberhentikan kode jika kode yg dicari	)
+  default:						( sudah ditemukan atau tersedia, jika tidak ada break maka kode akan	)
+    kode yang akan ditampilkan;				( mengeksekusi secara terus menerus, fungsi dari default adalah 	)
+}							( pilihan terakhir jika dari semua value tidak ada yg cocok.		)
+
+
+$i = 1;							( Blok kode while akan terus menjalankan eksekusi kode 	)
+while ($i <= 5) {					( selama hasilnya adalah true 				)
+    echo "Iterasi ke-$i<br>";				(							)
+    $i++;						(							)
+}							(							)
+
+
+$j = 1;							( Do While akan selalu menjalankan kodenya sekali	)
+do {							( sebelum memeriksa kondisi dan dia juga akan terus 	)
+    echo "Iterasi ke-$j<br>";				( mengeksekusi kode 					)
+    $j++;						(							)
+} while ($j <= 5);					(							)
+
+
+for ($k = 1; $k <= 5; $k++) {				( For berguna untuk mengulang sebuah kode		)
+    echo "Iterasi ke-$k<br>";				( dengan kondisi atau range tertentu			)
+}							(							)
+
+
+$colors = ["Merah", "Hijau", "Biru"];			( Digunakan untuk menampilkan sebuah kode yang 		)
+foreach ($colors as $color) {				( berasal dari array atau lebih tepatnya untuk		)
+    echo "Warna: $color<br>";				( Menampilkan sebuah value				)
+}							(							)
+
+
+function writeMSG(){			( Function di php berfungsi untuk menyimpan data 	)
+echo "Hello World!";			( dan dapat digunakan untuk memanggilnya berkali kali	)
+}					(							)
+writeMSG()				(							)
+
+
+function familyName($fname, $year) {		( Fungsi di samping adalah untuk menyimpan	)
+  echo "$fname Refsnes. Born in $year <br>";	( dan memodifikasi data dan menampilkanya	)
+}						( pada sintaksis echo anda dapat memahaminya	)
+familyName("Hege", "1975");			( dengan mudah					)
+
+
+function addNumbers(int $a, int $b) {		( Seperti yang dilihat function juga dapat 	)
+  return $a + $b;				( digunakan untuk mengonversi data atau		)
+}						( mengubah sebuah data				)
+echo addNumbers(5, "5 days");			(						)
+
+
+declare(strict_types=1);			( Fungsi dengan tambahan metode declare, berfungsi untuk		)
+function add(int $a, int $b): int {		( memperketat pengkondisian atau memastikan kebenaran			)
+    return $a + $b;				( sedikit susah dipahami untuk pemula!					)
+}						( di dalam fungsi sebelumnya dan ini sedikit diperketat			)
+$result = add(5, "3");				( gunakanlah return untuk mengembalikan keadaan di kondisi semula 	)
+
+
+$variable = array("Array1", "Array2", "Array3");		(Disamping adalah contoh arry sederhana, array dapat berisi apapun, string, int dll)
+echo $variable[0];						(Disamping adalah cara untuk menampilkan sebuah array, array dimulai dari 0, 1 ,2 dst)
+
+
+$variable = array("Array1", "Array2", "Array3");		( Disamping adalah metode menampilkan array dengan for 	)
+$varlength = count($variable);					( gunakan count di variable baru untuk menghitung	)
+for($x = 0; $x < $varlength; $x++){				(							)
+echo $variable[$x];						(							)
+}								(							)
+
+
+$variable = array("Peter" => 35, "age" => 16);		( Disamping adalah contoh pengunaan metode array asosiatif	)
+echo $variable['Peter'];				( atau array dengan nama berisikan value			)
+
+
+$age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");		( Disamping adalah contoh cara memunculkan key dan value	)
+foreach($age as $x => $x_value) {				( pada array dengan menggunakan metode foreach			)
+  echo "Key=" . $x . ", Value=" . $x_value;			( disitu terdapat alias dengan pengkondisian $x sebagai key	)
+}								( dan $x_value adalah sebagai value array			)
+
+
+$cars = array (									( Disamping adalah array multidimensional		)
+  array("Volvo",22,18),								( Metode array yang sering digunakan, singkatnya	)
+  array("BMW",15,13),								( Array tersebut adalah, terdapat array didalam		)
+  array("Saab",5,2),								( Array, metode ini memungkinkan penyimpanan 		)
+  array("Land Rover",17,15)							( sebuah data array dalam tingkat lanjutan 		)
+);										( dan lebih banyak					)
+echo $cars[0][0].": In stock: ".$cars[0][1].", sold: ".$cars[0][2].".<br>";	(							)
+echo $cars[1][0].": In stock: ".$cars[1][1].", sold: ".$cars[1][2].".<br>";	(							)
+echo $cars[2][0].": In stock: ".$cars[2][1].", sold: ".$cars[2][2].".<br>";	(							)
+echo $cars[3][0].": In stock: ".$cars[3][1].", sold: ".$cars[3][2].".<br>";	(							)
+
+
+sort()						(Untuk mengubah urutan array secara ascending atau dari kecil ke yang terbesar)
+rsort()						(Untuk mengubah urutan array secara descending atau dari yang terbesar ke yang terkecil)
+asort()						(Untuk mengurutkan array dari yang terkecil ke yang terbesar berdasarkan nilai / integer)
+ksort()						(Untuk mengurutkan sebuah array dalam bentuk ascending secara alfabet dari a ke z)
+arsort()					(Untuk mengurutkan array secara descending dalam bentuk nilai atau integer)
+krsort()					(Untuk mengurutkan array secara descending dalam bentuk alfabet dari z ke a)
+
+
+$global_var = 10;			( Berfungsi untuk mengakses variable secara global di dalam function dll 	)
+function access_global_var() {		(										)	
+    echo $GLOBALS['global_var'];	(										)	
+}					(										)
+access_global_var(); // Output: 10	(										)
+
+
+echo "Alamat IP Server: " . $_SERVER['SERVER_ADDR'];	( Berisikan informasi tentang server 	)
+echo "Nama File Skrip: " . $_SERVER['PHP_SELF'];	( Berfungsi pada server side 		)
+
+
+<form method="post" action="process.php">			( Untuk mengambil data informasi dengan meotde post	)
+    <input type="text" name="name" placeholder="Nama">		(							)
+    <input type="submit" value="Kirim">				(							)
+</form>								(							)
+$name = $_POST['name']; 					(							)
+echo "Halo, $name!";						(							)
+
+
+setcookie("user", "John", time() + 3600, "/");		( Digunakan untuk mengelola data klien		)
+echo "Nama pengguna: " . $_COOKIE['user'];		(						)
+
+
+session_start();			( Digunakan untuk memulai sebuah sesi atau pengambilan data pengguna 	)
+$_SESSION['user_id'] = 123;		(									)
+
+
+<form method="post" action="upload.php" enctype="multipart/form-data">		( Difunakan untuk mengambil upload an file 	)
+    <input type="file" name="file">						( yang diunggah oleh pengguna 			)
+    <input type="submit" value="Unggah">					(						)
+</form>										(						)
+$target_dir = "uploads/";							(						)
+$target_file = $target_dir . basename($_FILES["file"]["name"]);			(						)
+if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {		(						)
+    echo "File berhasil diunggah.";						(						)
+} else {									(						)
+    echo "Gagal mengunggah file.";						(						)
+}										(						)
+
+
+$documentRoot = $_ENV['DOCUMENT_ROOT'];		( Berfungsi untuk mengakses envirotment 	)
+echo "Root Dokumen: $documentRoot";		( atau variable data sistem 			)
+
+
+if (isset($_REQUEST['username'])) {			( Berfungsi untuk mengambil data dari permintaan 	)
+    $username = $_REQUEST['username'];			( Tanpa peduli dari mana data tersebut berasal		)
+    echo "Halo, $username!";				(							)
+}							(							)
+
+
+$text = "Halo, nama saya John.";		( preg_match berfungsi untuk mencari ketersediaan	)
+if (preg_match("/John/", $text)) {		( sebuah value pada php jika tersedia mengembalikan 1	)
+    echo "Nama John ditemukan.";		( jika tidak maka akan 0				) 
+}						(							)
+
+
+$text = "Halo, nama saya John. Nama saya John lagi.";		( preg_match_all berfungsi untuk mencari banyak	)
+$matches = [];							( kecocokan jika true maka 1 jika false maka 0	)
+$count = preg_match_all("/John/", $text, $matches);		( beda dengan yang tadi, jika tadi hanya 1 maka	)
+echo "Jumlah kecocokan: " . $count;				( yang ini adalah semua.			)
+
+
+$text = "Halo, nama saya John. Nama saya John lagi.";		( preg_replace berguna untuk melakukan		)
+$newText = preg_replace("/John/", "Doe", $text);		( replace pada kata yang ditentukan seperti	)
+echo $newText;							( di samping.					)
+
+
+i (Case-Insensitive)				(pencocokan pola akan dilakukan tanpa memperhatikan huruf besar atau kecil)
+m (Multiline)					(Untuk mencari pencocokan pertama berada di baris berapa, jika sudah ketemu satu yasudah)
+u (UTF-8 Matching)				(digunakan untuk mencocokkan pola UTF-8 dengan benar)
+[abc]						(mencocokkan satu karakter dengan salah satu karakter, Misalnya, /[abc]/ akan mencocokkan "a", "b", atau "c")
+[^abc]						(mencocokkan satu karakter yang tidak ada dalam tanda kurung siku, Misalnya, /[^abc]/ akan mencocokkan karakter apa pun kecuali "a", "b", atau "c")
+[0-9]						(mencocokkan satu karakter dengan angka dalam rentang 0 hingga 9, Misalnya, /[0-9]/ akan mencocokkan angka apa pun antara 0 hingga 9)
+| (Alternation)					(mencocokkan salah satu dari beberapa pola yang dipisahkan oleh tanda |, Misalnya, /cat|dog|fish/ akan mencocokkan "cat", "dog", atau "fish")
+. (Dot)						(mencocokkan satu instance dari karakter apa pun (kecuali karakter baris baru, kecuali Anda menggunakan modifikasi s, Misalnya, /c.t/ akan mencocokkan "cat", "cut", "cot")
+^ (Caret)					(mencocokkan awal dari string, Misalnya, /^Hello/ akan mencocokkan "Hello" jika itu ada di awal string)
+$ (Dollar Sign)					(mencocokkan akhir dari string, Misalnya, /World$/ akan mencocokkan "World" jika itu ada di akhir string)
+\d						(mencocokkan digit (0-9) dalam teks, Misalnya /[0-9]/ setara dengan /[\d]/ dan akan mencocokkan angka apa pun)
+\s						(mencocokkan karakter spasi putih (seperti spasi, tab, atau karakter baris baru) dalam teks, Misalnya, /[ \t\n]/ setara dengan /[\s]/ dan akan mencocokkan karakter spasi putih apa pun)
+\b (Word Boundary)				(mencocokkan batas kata (word boundary), Ini akan mencocokkan posisi di awal atau akhir kata, Misalnya, /\bWORD/ akan mencocokkan "WORD" jika itu muncul di awal kata, dan /WORD\b/ akan mencocokkan jika itu muncul di akhir kata)
+\uxxxx						(mencocokkan karakter Unicode yang ditentukan oleh nomor heksadesimal xxxx, Misalnya, /[\u20AC]/ akan mencocokkan karakter euro (€))
+n+						(bahwa karakter n harus muncul setidaknya satu kali atau lebih dalam string, Misalnya, /an+/ akan mencocokkan "an", "ann", "annn", dan seterusnya)
+n*						(bahwa karakter n dapat muncul nol kali atau lebih dalam string, Misalnya, /an*/ akan mencocokkan "", "an", "ann", dan seterusnya)
+n?						(bahwa karakter n dapat muncul nol kali atau satu kali dalam string, Misalnya, /an?/ akan mencocokkan "", "an", dan tidak akan mencocokkan "ann" atau lebih)
+n{x}						(bahwa karakter n harus muncul persis x kali dalam string, Misalnya, /an{3}/ akan mencocokkan "annn" dan tidak akan mencocokkan "an" atau "ann" yang memiliki kemunculan lebih sedikit atau lebih banyak)
+n{x,y}						(bahwa karakter n harus muncul setidaknya x kali dan tidak lebih dari y kali dalam string, Misalnya, /an{2,4}/ akan mencocokkan "ann", "annn", "annnn", dan tidak akan mencocokkan "an" atau "annnnn")
+n{x,}						(bahwa karakter n harus muncul setidaknya x kali atau lebih dalam string, Misalnya, /an{2,}/ akan mencocokkan "ann", "annn", "annnn", dan seterusnya)
+====================================================================================================================
+PHP FORMS
+====================================================================================================================
+<a href="process.php?name=John&age=30">Klik untuk Kirim Data</a>	( Metode get lebih cenderung berfungsi di url 	)				
+$name = $_GET['name'];							( maka hindari penggunaan metode ini dengan 	)
+$age = $_GET['age'];							( informasi yang sensitif 			)
+echo "Nama: $name, Usia: $age";						(						)
+
+
+<form action="process.php" method="post">	( Metode Post cenderung lebih aman karena mengandalkan file bukan jalus url 	)
+    Nama: <input type="text" name="name">	( gunakan metode ini untuk mengirim data dari inputan ke klien server 		)
+    Usia: <input type="text" name="age">	(										)
+    <input type="submit" value="Kirim">		(										)
+</form>						(										)
+$name = $_POST['name'];				(										)
+$age = $_POST['age'];				(										)
+echo "Nama: $name, Usia: $age";			(										)
+
+
+
+empty()				(memeriksa apakah suatu variabel kosong (null), tidak terdefinisi)
+test_input()			(membersihkan data input dari pengguna dari potensi masalah keamanan, seperti serangan injeksi kode atau HTML,
+				(Metode kombinasi, trim(), stripslashes(), dan htmlspecialchars())
+trim() 				(digunakan untuk menghapus spasi atau karakter whitespace (seperti spasi, tab, dan karakter baris baru) dari awal dan akhir sebuah string)
+stripslashes() 			(digunakan untuk menghapus karakter backslash (\) dari sebuah string. Karakter backslash digunakan untuk melarang karakter khusus dalam string)
+htmlspecialchars() 		(digunakan untuk mengkonversi karakter-karakter khusus HTML menjadi entitas HTML yang aman)
+====================================================================================================================
+PHP ADVANCED - NEXT LEVEL
+====================================================================================================================
+date("Y/m/d")			(Contoh penulisan timestamp yang benar atau anda bisa memodifikasinya :
+date("Y.m.d")			 d - Mewakili hari dalam sebulan (01 hingga 31)
+date("Y-m-d")			 m - Mewakili satu bulan (01 hingga 12)
+				 Y - Mewakili tahun (dalam empat digit
+				 l (huruf kecil 'L') - Mewakili hari dalam seminggu))
+
+
+date("h:i:sa") 			(H - format 24 jam dalam satu jam (00 hingga 23)
+				 h - format 12 jam dengan angka nol di depan (01 hingga 12)
+				 i - Menit dengan angka nol di depan (00 hingga 59)
+				 s - Detik dengan angka nol di depan (00 hingga 59)
+				 a - Huruf Kecil Ante meridiem dan Post meridiem (am atau pm))	
+
+
+strtotime() | strtotime(time, now)		( digunakan untuk mengubah string tanggal yang dapat 						)
+						( dibaca manusia menjadi stempel waktu Unix (jumlah detik sejak 1 Januari 1970 00:00:00 GMT)	)
+$d=strtotime("tomorrow");			( ! Metode ini memiliki banyak bug, pastikan menggunakanya dengan benar				)
+echo date("Y-m-d h:i:sa", $d) . "<br>";		( pastikan selalu memasang sintaksis yang tepat							)
+						(												)	
+$d=strtotime("next Saturday");			(												)
+echo date("Y-m-d h:i:sa", $d) . "<br>";		(												)
+						(												)	
+$d=strtotime("+3 Months");			(												)
+echo date("Y-m-d h:i:sa", $d) . "<br>";		(												)
+
+
+require 'File_name.php';		(berfungsi untuk mengambil file diluar berkas untuk menjadi satu, jika error akan menghasilkan fatal error)
+include "File_name.php';		(Berfungsi untuk mengambil file diluar berkas untuk menjadi satu, jika error file akan terus dieksekusi)
+readfile("file.txt");			(Berfungsi untuk membuka atau membaca file dengan metode php)
+
+r					(Membuka berkas untuk mode baca saja)
+w					(Membuka berkas untuk mode tulis saja. Isi berkas yang ada akan dihapus, atau berkas baru akan dibuat jika tidak ada)
+a					(Membuka berkas untuk mode tulis saja. Data yang ada dalam berkas akan dipertahankan. Penunjuk berkas dimulai dari akhir berkas. Jika berkas tidak ada)
+x					(Membuka berkas untuk mode tulis saja. Jika berkas sudah ada, maka fopen() akan mengembalikan FALSE bersamaan dengan kesalahan jika berkas tersebut sudah ada. Berguna untuk mencegah penimpaan berkas yang sudah ada)
+r+					(Membuka berkas untuk mode baca dan tulis. Penunjuk berkas dimulai dari awal berkas)
+w+					(Membuka berkas untuk mode baca dan tulis. Isi berkas yang ada akan dihapus, atau berkas baru akan dibuat jika tidak ada)
+a+					(Membuka berkas untuk mode baca dan tulis. Data yang ada dalam berkas akan dipertahankan. Penunjuk berkas dimulai dari akhir berkas. Jika berkas tidak ada, berkas baru akan dibuat)
+x+					(Membuka berkas untuk mode baca dan tulis. Jika berkas sudah ada, maka fopen() akan mengembalikan FALSE bersamaan dengan kesalahan jika berkas tersebut sudah ada. Berguna untuk mencegah penimpaan berkas yang sudah ada)
+
+fopen()					(berisi nama file yang akan dibuka cara menggunakan : fopen("webdictionary.txt", "r") or die("Unable to open file!");)
+fread()					(membaca dari file yang terbuka, Cara menggunakan : fread($myfile,filesize("webdictionary.txt"));)
+fclose()				(digunakan untuk menutup file yang terbuka, cara pakai : $myfile = fopen("webdictionary.txt", "r"); fclose($myfile);)
+fgets()					(digunakan untuk membaca satu baris dari suatu file)
+feof()					(memeriksa apakah "end-of-file" (EOF) telah tercapai. berguna untuk mengulang data yang panjangnya tidak diketahui)
+fgetc()					(digunakan untuk membaca satu karakter dari suatu file)
+====================================================================================================================
+PHP OOP
+====================================================================================================================
+(!) Cara Membuat class pada php
+
+class robot {
+public $suara = "awokawok";
+public $bahan = "metal";
+public $berat = 20;
+}
+
+(!) Cara memunculkan class pada php
+
+$namaVariable = new robot;
+echo $namaVariable->suara . $namaVariable->bahan . $namaVariable->berat;
+
+(!) Cara membuat function. dan function di dalam class
+
+class robot {
+public $suara = "awokawok";
+public $bahan = "metal";
+public $berat = 20;
+
+public function bersuara(){
+echo $this->suara;
+}
+
+public function berat(){
+}
+}
+
+(!) Fungsi pada $this adalah mengambil / mendefinisikan kelas di dalam dirinya sendiri
+(!) Pada function di php juga dapat mengembalikkan nilai return
+
+(!) Berikut cara memunculkan class pada php
+
+$namaVariable = new robot;
+$namaVariable->bersuara();
+echo $namaVariable->Berat();
+
+(!) Metode set dan get pada function php
+
+class robot {
+public $suara = "awokawok";
+public $bahan = "metal";
+public $berat = 20;
+
+(!) Metode set suara 
+function setSuara($suara){
+$this->suara = $suara;
+}
+
+(!) Metode get suara dengan return
+
+function getSuaraa(){
+return $this->suara;
+}
+}
+
+(!) Cara memunculkan atau menampilkan
+
+$robot1 = new robot;
+$robot1->setSuara("awoakwkok");
+echo robot->robot1->getSuaraa();
+
+(!) Cara membuat konstruktor pada php
+(!) Pastikan sebelum membuat konstruktor anda memiliki 2 file terpisah
+
+(!) Isi dari file yang pertama
+
+require_once 'namafile.php';				(Berfungsi untuk memanggil sebuah konstruktor)
+$namaVariable1 = new robot('parameter');		(Berfungsi untuk memanggil sebuah fungsi yang sudah dibuat di file kedua yang dibuat dengan konstruktor)
+
+(!) Isi dari file yang kedua
+
+class robot(){
+public $suara;
+public function __construct($suara){
+$this->suara = $suara;
+
+function setSuara($suara){
+$this->suara = $suara;
+}
+}
+
+(!) Inheritance atau pewarisan
+
+class robot_hewan extends robot{
+public function getKekuatan(){
+echo "Kece badai";
+}
+}
+
+
+(!) Static pada metode php
+
+class orang {
+public static function namafungsi(){
+echo "Contoh static";
+}
+}
+
+(!) Cara pemanggilan
+
+orang::namafungsi();
+
+(!) Statement lain untuk sebuah static
+
+class orang {
+pubic $suara = "awokawok";
+}
+
+(!) Cara menampilkkan sebuah value dari static
+
+echo orang::$suara;
+====================================================================================================================
+DATABASE CONNECTION
+====================================================================================================================
+(!) Cara umum mengkoneksikan sebuah database pada php, pastikan mysqli di xampp aktif sebelum melakukannya
+
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "nama_database";
+
+$mysqli = new mysqli($host, $user, $pass, $db);
+
+if($mysqli->connect_errno){
+echo "gagal kang" . $mysqli->connect_error;
+}
+
+(!) Prepare Statement
+
+$namaVariable = $mysqli->real_escape_string($_GET['user']);		(Untuk mendapatkan variable namun dengan metode yang lebih aman)
+
+(!) Metode prepare
+
+$statement = $mysqli->prepare('INSERT INTO nama_table(nama_kolom, nama_kolom) VALUES (?,?)');
+$statement = $mysqli->bind_param('ss', $nama, $alamat);
+
+(!) Keterangan :
+s = string
+d = double 
+i = integer
+
+(!) Membuat isian dari sebuah variable
+$nama = "apalah";
+$alamat = "sempak kerbau";
+
+$statement->execute();							(Untuk melakukan eksekusi dari sebuah isian tadi)
+
+
+(!) Memilih semua kolom
+$query = "SELECT *  FROM nama_tabel";
+$result = $mysqli->query($query);
+
+(!) cara mengeluarkan isi dari database
+
+if($result->num_rows > 0){
+while($row = $result->fetch_assoc()){
+echo $row['nama_kolom'];
+}
+}
+
+(!) Cara menghapus sebuah data dari kolom database
+
+$sql = "DELETE FROM nama_table WHERE nama_kolom='isi_kolom'";
+
+if($mysqli->query($sql) === TRUE ){
+echo "berhasil dihapus";
+} else {
+echo "gagal dihapus";
+}
+
+(!) Cara mengedit sebuah data dari kolom database
+
+$sql = "UPDATE nama_table SET nama_kolom='isi_data', nama_kolom='isi_data' WHERE nama_kolom='isi_kolom'";
+
+if($mysqli->query($sql) === TRUE ){
+echo "berhasil diedit";
+} else {
+echo "gagal diedit";
+}
+
+$mysqli->close();							(Untuk menutup atau mengakhiri sebuah database)
+====================================================================================================================
+MYSQL DATABASES
+====================================================================================================================
+- c:\xampp\mysql\bin				(direktori umum tersimpannya mysql)
+- mysql.exe					(anda bisa mengakses ini langsung untuk masuk ke terminal, namun sebagai guest)
+
+(!) Gunakanlah cmd command prompt untuk masuk sebagai super user, dengan mengetiikan perintah sebagai berikut :
+
+- cd \						(Keluar dari direktori pertama amasuk dan akses c:)
+- cd xampp\mysql\bin				(Masuk ke direktori xampp untuk mengakses mysql)
+- mysql -u root -p 				(Masuk ke mysql dengan terminal sebagai super user, untuk password cukup andsa space saja)
+
+- mysql databases;				(Untuk menampilkan sebuah informasi dari database)
+- create database nama_database;		(Untuk membuat sebuah database baru)
+- use nama_database;				(Untuk memakai database atau menggunakannya)
+- create table nama_table (			(Untuk membuat sebuah table beserta isi kolomnya, perhatikan tanda kurungnya)
+
+- id int primary key auto_increment,		(untuk membuat sebuah kolom id, dengan tipe integer, dan auto increment, atau auto generate, dan primary key, untuk sebuah karakter sepcial)
+- nama varchar(100),				(membuat table nama dengan sebuah character dengan panjang 100)
+- nrp char(9),					(untuk membuat table dengan nama nrp, dan tingkat panjang karakter yang pasti yaitu "9")
+- email varchar(100),				(Unruk membuat table email dengan panjang karakter "100")
+- jurusan varchar(100),				(Untuk membuat sebuah table jurusan dengan panjang karakter 100)
+- gambar varchar(100)				(untuk membuat sebuah table gambar dengan panjang karakter 100)
+- );						(untuk mengakhiri eksekusi penambahan sebuah table, perhatikan ");")
+
+- show tables;					(Untuk menampilkan semua list table)
+- describe nama_table;				(Untuk menampilkan keterangan isi dari sebuah table)
+
+- insert into nama_table values	('','');	(berfungsi untuk menambahka data atau value pada kolom, pastikan untuk mengisi value dengan urut sesuai dengan kolom)
+- select * from nama_table;			(untuk menampilkan semua data dari table yang dipilih)
+- select nama_kolom from nama_table		(untuk menampilkan data dari kolom terpilih)
+- select nama_kolom, nama_kolom from table 	(untuk menampilkan dua data dari kolom yang terpilih)
+- select * from nama_table where nama_kolom = 'isi_data'; 				(untuk menampilkan data dari isi kolom yang anda pilih)
+- update nama_table set nama_kolom = 'tulisan_ganti' where nama_table = 'data_unik';  	(untuk mengubah sebuah data dari kolom)
+- drop database nama_database								(menghapus sebuah nama dari mahasiswa)
